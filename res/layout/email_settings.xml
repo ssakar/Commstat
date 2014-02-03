@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <PreferenceCategory android:title="Login" >
+
+        <EditTextPreference
+            android:id="@+id/username"
+            android:key="@string/email_username_key"
+            android:title="Username" 
+            android:summary="Username used to login to server" />
+
+        <EditTextPreference
+            android:id="@+id/password"
+            android:key="@string/email_password_key"
+            android:inputType="textPassword"
+            android:title="Password" 
+            android:summary="Password of this email account" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Server" >
+
+        <ListPreference
+            android:id="@+id/imap"
+            android:entries="@array/email_type"
+            android:entryValues="@array/email_type_values"
+            android:key="@string/email_type_key"
+            android:title="Type" 
+            android:summary="Type of email Account. IMAP or POP3" />
+
+        <EditTextPreference
+            android:id="@+id/host"
+            android:key="@string/email_host_key"
+            android:title="Address"
+            android:summary="Incomming email server host address" />
+
+        <EditTextPreference
+            android:id="@+id/port"
+            android:key="@string/email_port_key"
+            android:title="Port" 
+            android:inputType="number"
+            android:summary="Port of the email service" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

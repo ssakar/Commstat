@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Commstat</string>
+    <string name="action_sync">Sync now</string>
+    <string name="action_archive">Archive</string>
+    <string name="action_contact">Contact</string>
+    <string name="action_account">Add Account</string>
+    <string name="sensor_title_section">Sensors</string>
+    <string name="email_title_section">Email</string>
+    <string name="facebook_title_section">Facebook</string>
+    <string name="switch_title">Data Collection</string>
+    <string name="sync_message">Syncing&#8230;</string>
+	<string name="sync_error">Error syncing. Please try again.</string>
+	<string name="update_message">Updating Configuration&#8230;</string>
+	<string name="update_error">Error updating. Please try again.</string>
+	<string name="archive_message">Writing archive&#8230;</string>
+	<string name="archive_error">Error writing archive. Please try again.</string>
+	<string name="upload_message">Uploading Archive&#8230;</string>
+	<string name="upload_error">Error uploading. Please try again.</string>
+	<string name="pipeline_disabled">Data collection is not enabled.</string>
+	<string name="probe_title">&lt;b&gt;Configured Probes: &lt;/b&gt;</string>
+	<string name="info_title">Data Collection</string>
+	<string name="info_message">Thank you for participating! This app will collect data from your phone and online sources. The data is anonymized and uploaded automatically.</string>
+	<string name="add_account_message">Please enter a name for the new account</string>
+	<string name="facebook_data_completed">Facebook data retrieval completed.</string>
+	<string name="email_username_key">email.username</string>
+	<string name="email_password_key">email.password</string>
+	<string name="email_type_key">email.type</string>
+	<string name="email_host_key">email.host</string>
+	<string name="email_port_key">email.port</string>
+	<string name="email_ssl_key">email.ssl</string>	
+	<string-array name="email_type">
+        <item>IMAP</item>
+        <item>IMAP + SSL</item>
+    	<item>POP3</item>
+    	<item>POP3 + SSL</item>    
+    </string-array>
+       <string-array name="email_type_values">
+        <item>imap</item>
+        <item>imaps</item>
+    	<item>pop3</item>
+    	<item>pop3s</item>    
+    </string-array>
+	<string name="applicationId">164648993719033</string>
+    <string name="default_pipeline">
+{
+   "name" : "default",
+   "version" : 1,
+   "archive": 
+	{
+	  "@schedule": {"interval": 86400}
+    },
+	"data": [
+	{
+      "@type": "de.tu_berlin.snet.probe.EmailProbe"
+    },
+    {
+      "@type": "de.tu_berlin.snet.probe.FacebookProbe"
+    },
+    {
+      "@type": "edu.mit.media.funf.probe.builtin.AndroidInfoProbe"
+    },
+    {
+      "@type": "edu.mit.media.funf.probe.builtin.HardwareInfoProbe"
+    },
+    {
+      "@type": "edu.mit.media.funf.probe.builtin.TimeOffsetProbe"
+    },
+    {
+      "@type": "edu.mit.media.funf.probe.builtin.CallLogProbe"
+    },
+    {
+      "@type": "edu.mit.media.funf.probe.builtin.SmsProbe"
+    },
+    {
+      "@type": "edu.mit.media.funf.probe.builtin.ContactProbe",
+      "@schedule": {
+        "interval": 86400,
+        "opportunistic": true,
+        "strict": false
+      }
+    },
+    {
+      "@type": "edu.mit.media.funf.probe.builtin.AccountsProbe",
+      "@schedule": {
+        "interval": 86400,
+        "opportunistic": true,
+        "strict": false
+      }
+    },
+    {
+      "@type": "edu.mit.media.funf.probe.builtin.TelephonyProbe",
+      "@schedule": {
+        "interval": 86400,
+        "opportunistic": true,
+        "strict": false
+      }
+    },
+    {
+      "@type": "edu.mit.media.funf.probe.builtin.SimpleLocationProbe",
+      "@schedule": {
+        "interval": 360,
+        "opportunistic": true,
+        "strict": false
+      }
+    },
+    {
+      "@type": "edu.mit.media.funf.probe.builtin.CellTowerProbe",
+      "@schedule": {
+        "interval": 360,
+        "opportunistic": true,
+        "strict": false
+      }
+    },
+    {
+      "@type": "edu.mit.media.funf.probe.builtin.WifiProbe",
+      "@schedule": {
+        "interval": 360,
+        "opportunistic": true,
+        "strict": false
+      }
+    },
+    {
+      "@type": "edu.mit.media.funf.probe.builtin.BluetoothProbe",
+      "@schedule": {
+        "interval": 360,
+        "opportunistic": true,
+        "strict": false
+      }
+    },
+    {
+      "@type": "edu.mit.media.funf.probe.builtin.LocationProbe",
+      "@schedule": {
+        "interval": 360,
+        "opportunistic": true,
+        "strict": false
+      }
+    }
+  ]
+}
+</string>
+
+</resources>
